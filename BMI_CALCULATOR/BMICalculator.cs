@@ -12,11 +12,11 @@ namespace BMI_CALCULATOR
 {
     public partial class BMICalculator : Form
     {
-        public string CalculatorState { get; set; }
+        public string CaculationType { get; set; }
         public BMICalculator()
         {
             InitializeComponent();
-            this.CalculatorState = MetricRadioButton.Text;
+            this.CaculationType = MetricRadioButton.Text;
         }
 
  
@@ -25,14 +25,14 @@ namespace BMI_CALCULATOR
         {
             MyHeightLabel.Text = "My Height cm";
             MyWightLabel.Text = "My Weight kg";
-            this.CalculatorState = MetricRadioButton.Text;
+            this.CaculationType = MetricRadioButton.Text;
         }
 
         private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             MyHeightLabel.Text = "My Height inch";
             MyWightLabel.Text = "My Weight pound";
-            this.CalculatorState = ImperialRadioButton.Text;
+            this.CaculationType = ImperialRadioButton.Text;
         }
 
         private void HeightInputTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,15 +50,12 @@ namespace BMI_CALCULATOR
 
         private void CalculateBMIButton_Click(object sender, EventArgs e)
         {
-            if (this.CalculatorState==MetricRadioButton.Text)
-            {
-                MessageBox.Show(MetricRadioButton.Text);
-            }
+            BMICalculatorModel bmiCalculator = new BMICalculatorModel();
+            bmiCalculator.MyHeight =Convert.ToDouble(HeightInputTextBox.Text);
+            bmiCalculator.MyWeight = Convert.ToDouble(WeightInputTextBox.Text);
 
-            if (this.CalculatorState == ImperialRadioButton.Text)
-            {
-                MessageBox.Show(ImperialRadioButton.Text);
-            }
+            BMIOutputTextBox.Text = bmiCalculator.BMIScale();
+            BMIResultTextBox.Text = bmiCalculator.BMIResult();
         }
 
         private double _bmiResult()
@@ -69,6 +66,11 @@ namespace BMI_CALCULATOR
         private double _bmiScale()
         {
             return 0;
+        }
+
+        private void BMICalculator_Load(object sender, EventArgs e)
+        {
+            BMIOutputTextBox.ForeColor = BMIOutputTextBox.ForeColor;
         }
     }
 }

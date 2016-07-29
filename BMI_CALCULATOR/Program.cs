@@ -7,10 +7,10 @@ using System.Windows.Forms;
  *Author: Md Mamunur Rahman   
  * Student ID: 300872772    
  *   
- * Date last modified: July 26, 2016   
+ * Date last modified: July 28, 2016   
  * Description: This program calculate Body Mass Index(BMI)    
  *    
- * Version: 0.0.1 - added form properties  
+ * Version: 0.0.3 - added model class  
  */ 
 
 namespace BMI_CALCULATOR

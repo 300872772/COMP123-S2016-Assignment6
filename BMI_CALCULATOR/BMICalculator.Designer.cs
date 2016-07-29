@@ -41,6 +41,7 @@
             this.BMIScaleLabel = new System.Windows.Forms.Label();
             this.MetricRadioButton = new System.Windows.Forms.RadioButton();
             this.CalculateBMIButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.tableLayoutPanel1.Controls.Add(this.BMIScaleLabel, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.MetricRadioButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.CalculateBMIButton, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.ExitButton, 1, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -71,8 +73,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(303, 440);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -163,9 +165,9 @@
             // 
             // BMIOutputTextBox
             // 
-            this.BMIOutputTextBox.BackColor = System.Drawing.Color.Gray;
+            this.BMIOutputTextBox.BackColor = System.Drawing.Color.LightGray;
             this.BMIOutputTextBox.Enabled = false;
-            this.BMIOutputTextBox.ForeColor = System.Drawing.Color.Lime;
+            this.BMIOutputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BMIOutputTextBox.Location = new System.Drawing.Point(120, 263);
             this.BMIOutputTextBox.Name = "BMIOutputTextBox";
             this.BMIOutputTextBox.Size = new System.Drawing.Size(180, 38);
@@ -214,6 +216,18 @@
             this.CalculateBMIButton.UseVisualStyleBackColor = false;
             this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateBMIButton_Click);
             // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Teal;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ExitButton.Location = new System.Drawing.Point(120, 410);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(180, 27);
+            this.ExitButton.TabIndex = 12;
+            this.ExitButton.Text = "EXIT";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -227,6 +241,7 @@
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -247,6 +262,7 @@
         private System.Windows.Forms.TextBox WeightInputTextBox;
         private System.Windows.Forms.TextBox BMIOutputTextBox;
         private System.Windows.Forms.Label BMIScaleLabel;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 
