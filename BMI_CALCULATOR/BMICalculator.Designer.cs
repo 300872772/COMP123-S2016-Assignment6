@@ -42,6 +42,7 @@
             this.MetricRadioButton = new System.Windows.Forms.RadioButton();
             this.CalculateBMIButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,19 +63,20 @@
             this.tableLayoutPanel1.Controls.Add(this.BMIScaleLabel, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.MetricRadioButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.CalculateBMIButton, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.ExitButton, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.ExitButton, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.ResetButton, 1, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 99F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(303, 440);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -84,7 +86,7 @@
             this.ResultLabel.BackColor = System.Drawing.Color.Transparent;
             this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultLabel.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.ResultLabel.Location = new System.Drawing.Point(3, 308);
+            this.ResultLabel.Location = new System.Drawing.Point(3, 291);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.ResultLabel.Size = new System.Drawing.Size(62, 54);
@@ -97,7 +99,7 @@
             this.MyWightLabel.BackColor = System.Drawing.Color.Transparent;
             this.MyWightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MyWightLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.MyWightLabel.Location = new System.Drawing.Point(3, 160);
+            this.MyWightLabel.Location = new System.Drawing.Point(3, 148);
             this.MyWightLabel.Name = "MyWightLabel";
             this.MyWightLabel.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.MyWightLabel.Size = new System.Drawing.Size(104, 56);
@@ -131,7 +133,7 @@
             // 
             this.WeightInputTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.WeightInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.WeightInputTextBox.Location = new System.Drawing.Point(120, 163);
+            this.WeightInputTextBox.Location = new System.Drawing.Point(120, 151);
             this.WeightInputTextBox.Name = "WeightInputTextBox";
             this.WeightInputTextBox.Size = new System.Drawing.Size(180, 31);
             this.WeightInputTextBox.TabIndex = 1;
@@ -141,12 +143,13 @@
             // 
             this.BMIResultTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BMIResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BMIResultTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BMIResultTextBox.Location = new System.Drawing.Point(120, 311);
+            this.BMIResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BMIResultTextBox.ForeColor = System.Drawing.Color.Purple;
+            this.BMIResultTextBox.Location = new System.Drawing.Point(120, 294);
             this.BMIResultTextBox.Multiline = true;
             this.BMIResultTextBox.Name = "BMIResultTextBox";
             this.BMIResultTextBox.ReadOnly = true;
-            this.BMIResultTextBox.Size = new System.Drawing.Size(180, 91);
+            this.BMIResultTextBox.Size = new System.Drawing.Size(180, 77);
             this.BMIResultTextBox.TabIndex = 7;
             // 
             // ImperialRadioButton
@@ -166,11 +169,12 @@
             // BMIOutputTextBox
             // 
             this.BMIOutputTextBox.BackColor = System.Drawing.Color.LightGray;
-            this.BMIOutputTextBox.Enabled = false;
-            this.BMIOutputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BMIOutputTextBox.Location = new System.Drawing.Point(120, 263);
+            this.BMIOutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BMIOutputTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.BMIOutputTextBox.Location = new System.Drawing.Point(120, 250);
             this.BMIOutputTextBox.Name = "BMIOutputTextBox";
-            this.BMIOutputTextBox.Size = new System.Drawing.Size(180, 38);
+            this.BMIOutputTextBox.ReadOnly = true;
+            this.BMIOutputTextBox.Size = new System.Drawing.Size(180, 35);
             this.BMIOutputTextBox.TabIndex = 10;
             // 
             // BMIScaleLabel
@@ -179,7 +183,7 @@
             this.BMIScaleLabel.BackColor = System.Drawing.Color.Transparent;
             this.BMIScaleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMIScaleLabel.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.BMIScaleLabel.Location = new System.Drawing.Point(3, 260);
+            this.BMIScaleLabel.Location = new System.Drawing.Point(3, 247);
             this.BMIScaleLabel.Name = "BMIScaleLabel";
             this.BMIScaleLabel.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.BMIScaleLabel.Size = new System.Drawing.Size(94, 32);
@@ -206,9 +210,9 @@
             // CalculateBMIButton
             // 
             this.CalculateBMIButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CalculateBMIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculateBMIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateBMIButton.ForeColor = System.Drawing.Color.White;
-            this.CalculateBMIButton.Location = new System.Drawing.Point(120, 222);
+            this.CalculateBMIButton.Location = new System.Drawing.Point(120, 209);
             this.CalculateBMIButton.Name = "CalculateBMIButton";
             this.CalculateBMIButton.Size = new System.Drawing.Size(180, 35);
             this.CalculateBMIButton.TabIndex = 2;
@@ -218,15 +222,33 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.Teal;
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExitButton.BackgroundImage")));
+            this.ExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ExitButton.Location = new System.Drawing.Point(120, 410);
+            this.ExitButton.Location = new System.Drawing.Point(3, 385);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(180, 27);
+            this.ExitButton.Size = new System.Drawing.Size(104, 49);
             this.ExitButton.TabIndex = 12;
-            this.ExitButton.Text = "EXIT";
             this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ResetButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResetButton.BackgroundImage")));
+            this.ResetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResetButton.Location = new System.Drawing.Point(120, 385);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(79, 52);
+            this.ResetButton.TabIndex = 13;
+            this.ResetButton.UseVisualStyleBackColor = false;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // BMICalculator
             // 
@@ -263,6 +285,7 @@
         private System.Windows.Forms.TextBox BMIOutputTextBox;
         private System.Windows.Forms.Label BMIScaleLabel;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 
